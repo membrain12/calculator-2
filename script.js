@@ -28,6 +28,19 @@ function operate(op, n1, n2) {
     }
 }
 
+
+const numbers = Array.from(document.querySelectorAll('.number'));
+const display = document.querySelector('#display');
+
+numbers.forEach(number => {
+    number.addEventListener('click', e => {
+        display.textContent += number.textContent;
+    });
+});
+
+
 let firstNum;
 let operation;
 let secNum;
+
+let displayValue = '';
