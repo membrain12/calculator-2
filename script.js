@@ -36,6 +36,7 @@ const operations = Array.from(document.querySelectorAll('.operations'));
 const display = document.querySelector('#display');
 const clear = document.querySelector('#clear');
 const equals = document.querySelector('#equals');
+const decimal = document.querySelector('#decimal');
 
 clear.addEventListener('click', e => {
     displayValue = "";
@@ -60,6 +61,13 @@ numbers.forEach(number => {
         displayValue += number.textContent;
         display.textContent = displayValue;
     });
+});
+
+decimal.addEventListener('click', () => {
+    if (displayValue.indexOf('.') == -1) {
+        displayValue += decimal.textContent;
+        display.textContent = displayValue;
+    }
 });
 
 operations.forEach(op => {
