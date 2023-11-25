@@ -32,3 +32,9 @@ button.two-thirds {
     flex: 2.2;
 }
 
+#display {
+    font-size: 32px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
