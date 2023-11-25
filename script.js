@@ -18,6 +18,10 @@ function divide(n1, n2) {
     return n1 / n2;
 }
 
+function percent(n1, n2) {
+    return (n2 /100) * n1;
+}
+
 function operate(op, n1, n2) {
     n1 = parseFloat(n1);
     n2 = parseFloat(n2);
@@ -30,6 +34,8 @@ function operate(op, n1, n2) {
         return multiply(n1, n2);
     } else if (op == "÷") {
         return divide(n1, n2);
+    } else if (op == "%") {
+        return percent(n1, n2);
     } else {
         return;
     }
