@@ -73,17 +73,27 @@ decimal.addEventListener('click', () => {
 operations.forEach(op => {
     op.addEventListener('click', e => {
         
-        firstNum = displayValue;
-        operation = op.textContent;
-        
-        displayValue = '';
-        display.textContent = displayValue;
+        if (firstNum != "" && operation != "") {
+            secNum = displayValue;
+            firstNum = operate(operation, firstNum, secNum);
+            operation = op.textContent;
+            secNum = "";
+            displayValue = firstNum;
+            display.textContent = displayValue;
+            displayValue = "";
+        } else {
+            firstNum = displayValue;
+            operation = op.textContent;
+            
+            displayValue = '';
+            display.textContent = displayValue;
+        }
     });
 });
 
 
-let firstNum;
-let operation;
-let secNum;
+let firstNum = '';
+let operation = '';
+let secNum = '';
 
 let displayValue = '';
