@@ -61,12 +61,16 @@ equals.addEventListener('click', () => {
         displayValue = displayValue.toString().slice(0, 14);
     }
     display.textContent = displayValue;
+    firstNum = displayValue;
+    operation = "";
     displayValue = "";
 });
 
 numbers.forEach(number => {
     number.addEventListener('click', e => {  
         displayValue += number.textContent;
+
+
         if (displayValue.toString().length > 14) {
             displayValue = displayValue.toString().slice(0, 14);
         }
@@ -99,7 +103,7 @@ operations.forEach(op => {
             display.textContent = displayValue;
             displayValue = "";
         } else {
-            firstNum = displayValue;
+            firstNum = display.textContent;
             operation = op.textContent;
             
             displayValue = '';

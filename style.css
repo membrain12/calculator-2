@@ -15,17 +15,21 @@ html, body {
     border-radius: 4px;
     height: 400px;
     width: 300px;
+    gap: 4px;
+    padding: 4px;
 }
 
 #outer-body > div {
     flex: 1;
     /*border: 1px solid black;*/
     display: flex;
+    gap: 4px;
 }
 
 button {
     flex: 1;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 button.two-thirds {
@@ -36,5 +40,6 @@ button.two-thirds {
     font-size: 32px;
     justify-content: flex-end;
     align-items: center;
+    border: 0.5px solid black;
 }
 
