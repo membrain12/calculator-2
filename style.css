@@ -6,34 +6,42 @@ html, body {
     justify-content: center;
     align-items: center;
     margin-bottom: 10%;
+    background-color: whitesmoke;
 }
 
 #outer-body {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: 8px;
     height: 400px;
     width: 300px;
-    gap: 4px;
-    padding: 4px;
+    gap: 8px;
+    padding: 16px;
+    background-color: grey;
 }
 
 #outer-body > div {
     flex: 1;
     /*border: 1px solid black;*/
     display: flex;
-    gap: 4px;
+    gap: 8px;
 }
 
 button {
     flex: 1;
     cursor: pointer;
     border-radius: 4px;
+    background-color: lightseagrey;
+    font-size: 24px;
 }
 
 button.two-thirds {
-    flex: 2.2;
+    flex: 2.37;
+}
+
+#equals {
+    background-color: salmon;
 }
 
 #display {
@@ -41,5 +49,6 @@ button.two-thirds {
     justify-content: flex-end;
     align-items: center;
     border: 0.5px solid black;
+    background-color: lightgrey;
 }
 
