@@ -52,6 +52,10 @@ equals.addEventListener('click', () => {
     }
     secNum = displayValue;
     displayValue = operate(operation, firstNum, secNum);
+
+    if (displayValue.toString().length > 14) {
+        displayValue = displayValue.toString().slice(0, 14);
+    }
     display.textContent = displayValue;
     displayValue = "";
 });
@@ -59,6 +63,9 @@ equals.addEventListener('click', () => {
 numbers.forEach(number => {
     number.addEventListener('click', e => {  
         displayValue += number.textContent;
+        if (displayValue.toString().length > 14) {
+            displayValue = displayValue.toString().slice(0, 14);
+        }
         display.textContent = displayValue;
     });
 });
@@ -66,6 +73,9 @@ numbers.forEach(number => {
 decimal.addEventListener('click', () => {
     if (displayValue.indexOf('.') == -1) {
         displayValue += decimal.textContent;
+        if (displayValue.toString().length > 14) {
+            displayValue = displayValue.toString().slice(0, 14);
+        }
         display.textContent = displayValue;
     }
 });
@@ -79,6 +89,9 @@ operations.forEach(op => {
             operation = op.textContent;
             secNum = "";
             displayValue = firstNum;
+            if (displayValue.toString().length > 14) {
+                displayValue = displayValue.toString().slice(0, 14);
+            }
             display.textContent = displayValue;
             displayValue = "";
         } else {
@@ -86,6 +99,9 @@ operations.forEach(op => {
             operation = op.textContent;
             
             displayValue = '';
+            if (displayValue.toString().length > 14) {
+                displayValue = displayValue.toString().slice(0, 14);
+            }
             display.textContent = displayValue;
         }
     });
