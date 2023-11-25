@@ -31,10 +31,17 @@ function operate(op, n1, n2) {
 
 const numbers = Array.from(document.querySelectorAll('.number'));
 const display = document.querySelector('#display');
+const clear = document.querySelector('#clear');
+
+clear.addEventListener('click', e => {
+    displayValue = "";
+    display.textContent = displayValue;
+});
 
 numbers.forEach(number => {
     number.addEventListener('click', e => {
-        display.textContent += number.textContent;
+        displayValue += number.textContent;
+        display.textContent = displayValue;
     });
 });
 
